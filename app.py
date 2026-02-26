@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
 
 app = Flask(__name__)
 
@@ -127,6 +125,4 @@ def delete_user(id):
     
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
-    init_db()
-    app.run(debug=True)
+init_db()
